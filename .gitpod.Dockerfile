@@ -22,6 +22,6 @@ ENV PATH $PATH:/home/gitpod/aws/bin
 
 # kubeseal
 RUN mkdir -p /home/gitpod/kubeseal/bin
-RUN curl -o /home/gitpod/kubeseal/bin/kubeseal https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.13.1/kubeseal-linux-amd64
+RUN curl -Lo /home/gitpod/kubeseal/bin/kubeseal https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.13.1/kubeseal-linux-amd64
 RUN chmod +x /home/gitpod/kubeseal/bin/kubeseal
 ENV PATH $PATH:/home/gitpod/kubeseal/bin
