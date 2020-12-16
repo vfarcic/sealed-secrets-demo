@@ -2,4 +2,4 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - command: chmod +x ./gitpod-init.sh && ./gitpod-init.sh
+  - init: mkdir -p ~/.kube && echo $KUBECONFIG_CONTENT | base64 --decode | tee ~/.kube/config
